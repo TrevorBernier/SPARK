@@ -12,13 +12,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop"
+        android:text="Start"
         android:id="@+id/button"
         android:layout_marginTop="105dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
-        android:background="#e53935"
+        android:background="#ff00c853"
         android:padding="25dp"
         style="@style/AppTheme"
         android:clickable="true"
@@ -40,14 +40,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logging..."
+        android:text="Not logging"
         android:id="@+id/textView2"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:textSize="25dp"
         android:textColor="#ffffff"
-        android:background="#ff00c853" />
+        android:background="#e53935" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,3 +68,4 @@
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
+
