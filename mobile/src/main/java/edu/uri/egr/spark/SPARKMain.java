@@ -1,12 +1,14 @@
 package edu.uri.egr.spark;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -23,6 +25,7 @@ public class SPARKMain extends Activity implements GoogleApiClient.ConnectionCal
     private static final String TAG = SPARKMain.class.getSimpleName();
     private GoogleApiClient mGoogleApi;
     private Button controlButton;
+    private TextView textlogging;
 
     private final String SPARK_START = "/spark/start/service";
     private final String SPARK_STOP = "/spark/stop/service";
@@ -67,12 +70,15 @@ public class SPARKMain extends Activity implements GoogleApiClient.ConnectionCal
             new messageSender(SPARK_START).start();
             controlButton.setText("Stop");
             controlButton.setBackgroundColor(Color.parseColor("#e53935"));
-
+            textlogging.setText("Logging...");
+            textlogging.setBackgroundColor(Color.parseColor("#ff00c853"));
             SPARK_STATE_CURRENT = SPARK_STATE_LOGGING;
         } else {
             new messageSender(SPARK_STOP).start();
             controlButton.setText("Start");
             controlButton.setBackgroundColor(Color.parseColor("#ff00c853"));
+            textlogging.setText("Not Logging");
+            textlogging.setBackgroundColor(Color.parseColor("#e53935"));
             SPARK_STATE_CURRENT = SPARK_STATE_IDLE;
         }
     }
@@ -123,6 +129,7 @@ public class SPARKMain extends Activity implements GoogleApiClient.ConnectionCal
         setContentView(R.layout.activity_sparkmain);
 
         controlButton = (Button) findViewById(R.id.controlButton);
+        textlogging = (TextView) findViewById(R.id.textlogging);
 
         SPARK_STATE_CURRENT = SPARK_STATE_IDLE;
 
