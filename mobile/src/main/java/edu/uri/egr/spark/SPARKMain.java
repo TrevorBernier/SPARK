@@ -66,10 +66,13 @@ public class SPARKMain extends Activity implements GoogleApiClient.ConnectionCal
         if (SPARK_STATE_CURRENT == SPARK_STATE_IDLE) {
             new messageSender(SPARK_START).start();
             controlButton.setText("Stop");
+            controlButton.setBackgroundColor(Color.parseColor("#e53935"));
+
             SPARK_STATE_CURRENT = SPARK_STATE_LOGGING;
         } else {
             new messageSender(SPARK_STOP).start();
             controlButton.setText("Start");
+            controlButton.setBackgroundColor(Color.parseColor("#ff00c853"));
             SPARK_STATE_CURRENT = SPARK_STATE_IDLE;
         }
     }
