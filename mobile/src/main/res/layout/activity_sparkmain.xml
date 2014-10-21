@@ -9,6 +9,17 @@
     tools:context="edu.uri.egr.spark.SPARKMain">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient #:"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:padding="25dp"
+        android:layout_marginLeft="50dp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,16 +37,35 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/button"
+        android:layout_marginTop="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:background="#e53935"
+        android:padding="25dp"
+        style="@style/AppTheme"
+        android:clickable="true"
+        android:height="110dp"
+        android:width="200dp"
+        android:textSize="50dp"
+        android:visibility="gone"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Patient #:"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:textSize="30dp"
-        android:padding="25dp"
-        android:layout_marginLeft="50dp" />
+        android:text="Logging..."
+        android:id="@+id/textView2"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:background="#ff00c853"
+        android:layout_above="@+id/textView3"
+        android:layout_alignEnd="@+id/textView2"
+        android:visibility="gone"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,3 +99,4 @@
 
 
 </RelativeLayout>
+
