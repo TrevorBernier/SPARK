@@ -37,41 +37,13 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop"
-        android:id="@+id/button"
-        android:layout_marginTop="105dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:background="#e53935"
-        android:padding="25dp"
-        style="@style/AppTheme"
-        android:clickable="true"
-        android:height="110dp"
-        android:width="200dp"
-        android:textSize="50dp"
-        android:visibility="gone"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logging..."
-        android:id="@+id/textView2"
-        android:textSize="25dp"
-        android:textColor="#ffffff"
-        android:background="#ff00c853"
-        android:layout_above="@+id/textView3"
-        android:layout_alignEnd="@+id/textView2"
-        android:visibility="gone"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Not logging"
-        android:id="@+id/textView2"
+        android:id="@+id/logging"
         android:textSize="25dp"
         android:textColor="#ffffff"
         android:background="#e53935"
